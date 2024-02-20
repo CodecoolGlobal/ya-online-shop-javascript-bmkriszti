@@ -43,7 +43,30 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
+app.post('/api/products', async (req, res)=>{
+    try{
+        const unparsedData = await fs.readFile("./data.json", 'utf8')
+        const parsedData = JSON.parse(unparsedData)
 
+        console.log(parsedData);
+        
+        parsedData.push({
+            name: req.body.name,
+            description: req.body.description,
+            size: req.body.size,
+            price: req.body.price,
+            ingredients: req.body.ingredients,
+            quantity: req.body.quantitity,
+            picture:req.body.picture}
+        )
+        await fs.writeFile("./data.json", JSON.stringify(parsedData))
+
+        res.json({})
+    }catch (error) {
+        console.log(error)
+        res.status(500).json({message: "Ups, unexpected error"})
+    }
+})
 
 app.listen(8080, () => {
     console.log("Server running on http://localhost:8080");

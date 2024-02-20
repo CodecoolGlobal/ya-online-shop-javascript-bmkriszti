@@ -40,6 +40,32 @@ const main = async () => {
     }
 };
 
+document.querySelector("#addBombForm").addEventListener("submit", async (e)=>{
+    try{e.preventDefault()
+    
+        let sendThis = {
+            name: document.getElementById("addName").value,
+            description: document.getElementById("addDescription").value,
+            size: document.getElementById("addSize").value,
+            price: document.getElementById("addPrice").value,
+            ingredients: document.getElementById("addIngredients").value,
+            quantity: document.getElementById("addQuantity").value,
+            picture: document.getElementById("addPicture").value
+        }
+        const resp = await fetch('/api/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(sendThis)
+          })
+            const respData = await resp.json()
+            alert (respData.message)
+    }catch (error){
+        alert (error)
+    }
+})
+
 // const renderBombList = async () => {
 //     const users = await fetchData("http://localhost:8080/api/bath");
 //     userListElement.innerHTML = await usersHTML(users);
