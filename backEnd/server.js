@@ -7,7 +7,7 @@ import url from "url";
 const filename = url.fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const app = express()
 app.use(express.json());
 
@@ -43,13 +43,14 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
-app.post('/api/products', async (req, res)=>{
-    try{
+
+app.post('/api/products', async (req, res) => {
+    try {
         const unparsedData = await fs.readFile("./data.json", 'utf8')
         const parsedData = JSON.parse(unparsedData)
 
         console.log(parsedData);
-        
+
         parsedData.push({
             name: req.body.name,
             description: req.body.description,
@@ -57,14 +58,15 @@ app.post('/api/products', async (req, res)=>{
             price: req.body.price,
             ingredients: req.body.ingredients,
             quantity: req.body.quantitity,
-            picture:req.body.picture}
+            picture: req.body.picture
+        }
         )
         await fs.writeFile("./data.json", JSON.stringify(parsedData))
 
         res.json({})
-    }catch (error) {
+    } catch (error) {
         console.log(error)
-        res.status(500).json({message: "Ups, unexpected error"})
+        res.status(500).json({ message: "Ups, unexpected error" })
     }
 })
 
