@@ -68,6 +68,17 @@ app.post('/api/products', async (req, res)=>{
     }
 })
 
+
+
+app.get('/client', async (req, res) => {
+    res.sendFile(path.join(__dirname, 'main.html'));
+  });
+
+
+
+
+
 app.listen(8080, () => {
     console.log("Server running on http://localhost:8080");
 });
+
