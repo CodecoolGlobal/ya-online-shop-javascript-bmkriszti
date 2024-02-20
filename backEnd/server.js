@@ -7,7 +7,7 @@ import url from "url";
 const filename = url.fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const app = express()
 app.use(express.json());
 
@@ -29,9 +29,9 @@ app.delete('/api/products/:id', async (req, res) => {
     try {
         const productsId = parseInt(req.params.id);
         const data = await fs.readFile('./data.json', 'utf8');
-        const productsData = JSON.parse(data);
-        const updatedProduct = productsData.filter(bomb => bomb.id !== productsId);
-        if (updatedProduct.length !== productsData.length) {
+        const products = JSON.parse(data);
+        const updatedProduct = products.filter(bomb => bomb.id !== productsId);
+        if (updatedProduct.length !== products.length) {
             await fs.writeFile('./data.json', JSON.stringify(updatedProduct), 'utf8');
             res.status(200).json({ state: 'DONE' });
         } else {
@@ -43,28 +43,31 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
-app.post('/api/products', async (req, res)=>{
-    try{
+
+app.post('/api/products', async (req, res) => {
+    try {
         const unparsedData = await fs.readFile("./data.json", 'utf8')
         const parsedData = JSON.parse(unparsedData)
 
         console.log(parsedData);
-        
+
         parsedData.push({
+            id: parseInt(req.body.id),
             name: req.body.name,
             description: req.body.description,
             size: req.body.size,
             price: req.body.price,
             ingredients: req.body.ingredients,
             quantity: req.body.quantitity,
-            picture:req.body.picture}
+            picture: req.body.picture
+        }
         )
         await fs.writeFile("./data.json", JSON.stringify(parsedData))
 
         res.json({})
-    }catch (error) {
+    } catch (error) {
         console.log(error)
-        res.status(500).json({message: "Ups, unexpected error"})
+        res.status(500).json({ message: "Ups, unexpected error" })
     }
 })
 
