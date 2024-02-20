@@ -66,6 +66,8 @@ document.querySelector("#addBombForm").addEventListener("submit", async (e)=>{
     }
 })
 
+
+
 // const renderBombList = async () => {
 //     const users = await fetchData("http://localhost:8080/api/bath");
 //     userListElement.innerHTML = await usersHTML(users);
