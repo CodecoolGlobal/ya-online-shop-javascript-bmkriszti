@@ -7,6 +7,7 @@ import url from "url";
 const filename = url.fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
+
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const app = express()
 app.use(express.json());
@@ -73,9 +74,13 @@ app.post('/api/products', async (req, res) => {
 
 
 
+const path = require('path');
+
 app.get('/client', async (req, res) => {
-    res.sendFile(path.join(__dirname, 'main.html'));
-  });
+    const clientDir = path.resolve(__dirname, '..', 'fronEnd');
+    res.sendFile(path.join(clientDir, 'client.html'))
+});
+
 
 
 

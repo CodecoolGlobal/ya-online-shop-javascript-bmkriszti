@@ -1,1 +1,99 @@
-[{"id":1,"name":"Intergalactic","description":"Csillagközi bestseller","size":"200g","price":"25 900 Ft","ingredients":["menta","grapefruit"],"quantity":4,"picture":"https://unicorn.lush.com/media/thumbnails/products/intergalactic_bath_bomb_2021_thumbnail_256.png"},{"id":4,"name":"Love Burger","description":"Szerelemburger a kádba","size":"155g","price":"30 000 Ft","ingredients":["rebarbara","citrom","vanília"],"quantity":4,"picture":"https://unicorn.lush.com/media/thumbnails/products/love_burger_bath_bomb_2023_1d58e281_thumbnail_256.png"},{"id":5,"name":"Moonlight","description":"Holdfényes fürdés","size":"220g","price":"28 500 Ft","ingredients":["rózsa","ylang-ylang","vanília"],"quantity":6,"picture":"https://unicorn.lush.com/media/thumbnails/products/moonlight_bath_bomb_2024_0211d47d_thumbnail_256.png"},{"id":6,"name":"Sunrise","description":"Hajnalban fürdés","size":"190g","price":"26 700 Ft","ingredients":["narancs","vanília","szegfűszeg"],"quantity":7,"picture":"https://unicorn.lush.com/media/thumbnails/products/sunrise_bath_bomb_2024_07a9947d_thumbnail_256.png"},{"id":7,"name":"Ocean Breeze","description":"Óceán illatú fürdés","size":"240g","price":"24 800 Ft","ingredients":["tengeri só","menta","levendula"],"quantity":8,"picture":"https://unicorn.lush.com/media/thumbnails/products/ocean_breeze_bath_bomb_2023_87aa357d_thumbnail_256.png"},{"id":9,"name":"Winter Magic","description":"Téli varázs","size":"210g","price":"29 400 Ft","ingredients":["fahéj","narancshéj","gyömbér"],"quantity":10,"picture":"https://unicorn.lush.com/media/thumbnails/products/winter_magic_bath_bomb_2023_9f23357d_thumbnail_256.png"},{"id":10,"name":"Autumn Leaves","description":"Őszi levelek","size":"180g","price":"26 200 Ft","ingredients":["alma","füge","gesztenye"],"quantity":11,"picture":"https://unicorn.lush.com/media/thumbnails/products/autumn_leaves_bath_bomb_2023_32bb357d_thumbnail_256.png"}]
+[
+    {
+        "id": 1,
+        "name": "Intergalactic",
+        "description": "Csillagközi bestseller",
+        "size": "200g",
+        "price": "25 900 Ft",
+        "ingredients": [
+            "menta",
+            "grapefruit"
+        ],
+        "quantity": 4,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/intergalactic_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 4,
+        "name": "Love Burger",
+        "description": "Szerelemburger a kádba",
+        "size": "155g",
+        "price": "30 000 Ft",
+        "ingredients": [
+            "rebarbara",
+            "citrom",
+            "vanília"
+        ],
+        "quantity": 4,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/love_burger_bath_bomb_2023_1d58e281_thumbnail_256.png"
+    },
+    {
+        "id": 5,
+        "name": "Moonlight",
+        "description": "Holdfényes fürdés",
+        "size": "220g",
+        "price": "28 500 Ft",
+        "ingredients": [
+            "rózsa",
+            "ylang-ylang",
+            "vanília"
+        ],
+        "quantity": 6,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/moonlight_bath_bomb_2024_0211d47d_thumbnail_256.png"
+    },
+    {
+        "id": 6,
+        "name": "Sunrise",
+        "description": "Hajnalban fürdés",
+        "size": "190g",
+        "price": "26 700 Ft",
+        "ingredients": [
+            "narancs",
+            "vanília",
+            "szegfűszeg"
+        ],
+        "quantity": 7,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/sunrise_bath_bomb_2024_07a9947d_thumbnail_256.png"
+    },
+    {
+        "id": 7,
+        "name": "Ocean Breeze",
+        "description": "Óceán illatú fürdés",
+        "size": "240g",
+        "price": "24 800 Ft",
+        "ingredients": [
+            "tengeri só",
+            "menta",
+            "levendula"
+        ],
+        "quantity": 8,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/ocean_breeze_bath_bomb_2023_87aa357d_thumbnail_256.png"
+    },
+    {
+        "id": 9,
+        "name": "Winter Magic",
+        "description": "Téli varázs",
+        "size": "210g",
+        "price": "29 400 Ft",
+        "ingredients": [
+            "fahéj",
+            "narancshéj",
+            "gyömbér"
+        ],
+        "quantity": 10,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/winter_magic_bath_bomb_2023_9f23357d_thumbnail_256.png"
+    },
+    {
+        "id": 10,
+        "name": "Autumn Leaves",
+        "description": "Őszi levelek",
+        "size": "180g",
+        "price": "26 200 Ft",
+        "ingredients": [
+            "alma",
+            "füge",
+            "gesztenye"
+        ],
+        "quantity": 11,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/autumn_leaves_bath_bomb_2023_32bb357d_thumbnail_256.png"
+    }
+]
