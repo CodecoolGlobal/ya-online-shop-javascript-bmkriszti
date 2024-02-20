@@ -23,12 +23,25 @@ app.get("/api/bath", async (req, res) => {
     } catch (error) {
         console.log(error + "Error, cannot get api/bath")
     }
-})
+});
 
-
-
-
-
+app.delete('/api/products/:id', async (req, res) => {
+    try {
+        const productsId = parseInt(req.params.id);
+        const data = await fs.readFile('./data.json', 'utf8');
+        const productsData = JSON.parse(data);
+        const updatedProduct = productsData.filter(bomb => bomb.id !== productsId);
+        if (updatedProduct.length !== productsData.length) {
+            await fs.writeFile('./data.json', JSON.stringify(updatedProduct), 'utf8');
+            res.status(200).json({ state: 'DONE' });
+        } else {
+            res.status(404).json({ state: 'Product not found' });
+        }
+    } catch (error) {
+        console.error('Error deleting user:', error);
+        res.status(500).json({ state: 'Error deleting product' });
+    }
+});
 
 
 
