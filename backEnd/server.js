@@ -29,9 +29,9 @@ app.delete('/api/products/:id', async (req, res) => {
     try {
         const productsId = parseInt(req.params.id);
         const data = await fs.readFile('./data.json', 'utf8');
-        const productsData = JSON.parse(data);
-        const updatedProduct = productsData.filter(bomb => bomb.id !== productsId);
-        if (updatedProduct.length !== productsData.length) {
+        const products = JSON.parse(data);
+        const updatedProduct = products.filter(bomb => bomb.id !== productsId);
+        if (updatedProduct.length !== products.length) {
             await fs.writeFile('./data.json', JSON.stringify(updatedProduct), 'utf8');
             res.status(200).json({ state: 'DONE' });
         } else {

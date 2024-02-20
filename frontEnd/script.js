@@ -1,3 +1,9 @@
+
+const userListElement = document.getElementById('root');
+const addBombForm = document.getElementById('addBombForm');
+const editBombForm = document.getElementById('editBombForm');
+
+
 const fetchData = async (url) => {
     try {
         const response = await fetch(url);
@@ -19,8 +25,8 @@ const renderBathBombHTML = async () => {
         const liElements = bombs.map(bomb => `
                 <li>
                     <span>${bomb.name}</span>
-                    <button class="edit" data-bombid="${bomb.name}">Edit</button>
-                    <button class="delete" data-bombid="${bomb.name}">Delete</button>
+                    <button class="edit" data-bombid="${bomb.id}">Edit</button>
+                    <button class="delete" data-bombid="${bomb.id}">Delete</button>
                 </li>
             `);
         return `<ul>${liElements.join('')}</ul>`;
@@ -40,40 +46,39 @@ const main = async () => {
     }
 };
 
-// const renderBombList = async () => {
-//     const users = await fetchData("http://localhost:8080/api/bath");
-//     userListElement.innerHTML = await usersHTML(users);
-//     userListElement.addEventListener('click', handleUserListClick);
-// };
+const renderBombList = async () => {
+    const users = await fetchData("http://localhost:8080/api/bath");
+    userListElement.innerHTML = await renderBathBombHTML();
+};
 
-// const handleUserListClick = async (event) => {
-//     const target = event.target;
-//     const userId = target.dataset.userid;
-//     if (target.classList.contains('delete')) {
-//         // Handle delete button click
-//         await deleteUserData(userId);
-//         awaBomb();
 
-//     }
-// }
+const handleUserListClick = async (event) => {
+    const target = event.target;
+    const bombId = target.dataset.bombid;
 
-// const populateEditForm = (userData) => {
-//     // Populate the edit form with the user data
-//     editUserForm.querySelector('#editFirstName').value = userData.name.first;
-//     editUserForm.querySelector('#editMiddleName').value = userData.name.middle;
-//     editUserForm.querySelector('#editLastName').value = userData.name.last;
-//     editUserForm.querySelector('#editEmail').value = userData.email;
-//     editUserForm.querySelector('#editShippingCountry').value = userData.shipping.country;
-//     editUserForm.querySelector('#editShippingZip').value = userData.shipping.zip;
-//     editUserForm.querySelector('#editShippingCity').value = userData.shipping.city;
-//     editUserForm.querySelector('#editShippingAddress').value = userData.shipping.address;
-//     editUserForm.querySelector('#editInvoiceCountry').value = userData.invoice.country;
-//     editUserForm.querySelector('#editInvoiceZip').value = userData.invoice.zip;
-//     editUserForm.querySelector('#editInvoiceCity').value = userData.invoice.city;
-//     editUserForm.querySelector('#editInvoiceAddress').value = userData.invoice.address;
-//     // Set a data attribute on the edit form to store the user ID
-//     editUserForm.dataset.userid = userData.id;
-// };
+    if (target.classList.contains('delete')) {
+        await deleteUserData(bombId);
+        await renderBombList();
+    }
+};
+
+const populateEditForm = (product) => {
+
+    editBombForm.querySelector('#editName').value = product.name;
+    editBombForm.querySelector('#editDescription').value = product.description;
+    editBombForm.querySelector('#editSize').value = product.size;
+    editBombForm.querySelector('#editPrice').value = product.price;
+    editBombForm.querySelector('#EditIngredients').value = product.ingredients.join(', ');
+    editBombForm.querySelector('#EditQuantity').value = product.quantity;
+    editBombForm.querySelector('#EditPicture').value = product.picture;
+
+    // Set a data attribute on the edit form to store the user ID
+    editBombForm.dataset.userid = product.id;
+};
+
+const deleteUserData = async (productId) => {
+    await fetch(`http://localhost:8080/api/products/${productId}`, { method: 'DELETE' });
+};
 
 // const handleEditUserSubmit = async (e) => {
 //     e.preventDefault();
@@ -132,13 +137,6 @@ const main = async () => {
 //     }
 // };
 
-
-// const deleteUserData = async (userId) => {
-
-//     await fetch(`http://localhost:8080/api/users/${userId}`, { method: 'DELETE' });
-// };
-
-
 // const handleAddUserSubmit = async (e) => {
 //     e.preventDefault();
 
@@ -188,13 +186,17 @@ const main = async () => {
 // };
 
 
-// const formDataToObject = (formData) => {
-//     const object = {};
-//     formData.forEach((value, key) => {
-//         object[key] = value;
-//     });
-//     return object;
-// };
+const formDataToObject = (formData) => {
+    const object = {};
+    formData.forEach((value, key) => {
+        object[key] = value;
+    });
+    return object;
+};
 
+window.addEventListener("load", async () => {
+    await renderBombList();
+    userListElement.addEventListener('click', handleUserListClick);
+});
 
 window.addEventListener("load", main);
