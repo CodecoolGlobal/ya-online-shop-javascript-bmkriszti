@@ -58,9 +58,9 @@ document.querySelector("#addBombForm").addEventListener("submit", async (e) => {
             body: JSON.stringify(sendThis)
         })
         const respData = await resp.json()
-        //alert(respData.message)
+        // alert(respData.message)
     } catch (error) {
-        alert(error)
+        // alert(error)
     }
 })
 
@@ -127,5 +127,4 @@ window.addEventListener("load", async () => {
 
 window.addEventListener("load", main);
 
-a
 a

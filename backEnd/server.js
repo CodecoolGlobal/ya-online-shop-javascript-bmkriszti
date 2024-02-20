@@ -15,6 +15,10 @@ app.use(express.json());
 app.use(express.static(path.join(dirname, "../frontEnd")));
 
 
+
+
+
+
 app.get("/api/bath", async (req, res) => {
     try {
         const data = await fs.readFile("./data.json", "utf-8")
@@ -25,6 +29,29 @@ app.get("/api/bath", async (req, res) => {
         console.log(error + "Error, cannot get api/bath")
     }
 });
+
+// async function patchUser(updatedFields, id) {
+//     const userList = await readUser()
+//     const index = userList.findIndex((user) => user.id === parseInt(id))
+//     if (index === -1) {
+//       return { code: 404, error: "user not found" }
+//     } else {
+//       userList[index] = { ...userList[index], ...updatedFields }
+//       const fileContentToSave = JSON.stringify(
+//         {
+//           users: userList
+//         }
+//         , null, 2)
+//       await writeFile(userJsonPath, fileContentToSave)
+//       return userList[index]
+//     }
+//   }
+
+
+
+
+
+
 
 app.delete('/api/products/:id', async (req, res) => {
     try {
@@ -74,10 +101,10 @@ app.post('/api/products', async (req, res) => {
 
 
 
-const path = require('path');
+
 
 app.get('/client', async (req, res) => {
-    const clientDir = path.resolve(__dirname, '..', 'fronEnd');
+    const clientDir = path.resolve(dirname, '..', 'fronEnd');
     res.sendFile(path.join(clientDir, 'client.html'))
 });
 
