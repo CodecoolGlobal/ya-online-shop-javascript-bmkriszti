@@ -71,6 +71,29 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
+app.patch('/api/products/:id', async (req, res) => {
+    try {
+        const productId = parseInt(req.params.id)
+        const data = await fs.readFile('./data.json', 'utf8');
+        const products = JSON.parse(data);
+
+        const index = products.findIndex(bomb => bomb.id === productId);
+
+        if (index !== -1) {
+            // Update the user data based on the request body
+            products[index] = { ...products[index], ...req.body };
+            await fs.writeFile('./data.json', JSON.stringify(products), 'utf8');
+            res.status(200).json(products[index])
+        } else {
+            res.status(404).json({ state: 'Product not found' });
+        }
+    } catch (error) {
+        console.error('Error updating products:', error);
+        res.status(500).json({ state: 'Error updating a product' });
+    }
+});
+
+
 
 app.post('/api/products', async (req, res) => {
     try {
@@ -86,7 +109,7 @@ app.post('/api/products', async (req, res) => {
             size: req.body.size,
             price: req.body.price,
             ingredients: req.body.ingredients,
-            quantity: req.body.quantitity,
+            quantity: req.body.quantity,
             picture: req.body.picture
         }
         )
@@ -100,17 +123,9 @@ app.post('/api/products', async (req, res) => {
 })
 
 
-
-
-
 app.get('/client', async (req, res) => {
-    const clientDir = path.resolve(dirname, '..', 'fronEnd');
-    res.sendFile(path.join(clientDir, 'client.html'))
+    res.sendFile(path.join(__dirname, 'main.html'));
 });
-
-
-
-
 
 
 app.listen(8080, () => {

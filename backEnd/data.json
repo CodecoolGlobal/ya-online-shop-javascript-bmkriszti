@@ -1,57 +1,22 @@
 [
     {
-        "id": 1,
-        "name": "Intergalactic",
-        "description": "Csillagközi bestseller",
-        "size": "200g",
-        "price": "25 900 Ft",
-        "ingredients": [
-            "menta",
-            "grapefruit"
-        ],
-        "quantity": 4,
-        "picture": "https://unicorn.lush.com/media/thumbnails/products/intergalactic_bath_bomb_2021_thumbnail_256.png"
-    },
-    {
-        "id": 4,
-        "name": "Love Burger",
-        "description": "Szerelemburger a kádba",
-        "size": "155g",
-        "price": "30 000 Ft",
-        "ingredients": [
-            "rebarbara",
-            "citrom",
-            "vanília"
-        ],
-        "quantity": 4,
-        "picture": "https://unicorn.lush.com/media/thumbnails/products/love_burger_bath_bomb_2023_1d58e281_thumbnail_256.png"
-    },
-    {
         "id": 5,
         "name": "Moonlight",
         "description": "Holdfényes fürdés",
         "size": "220g",
         "price": "28 500 Ft",
-        "ingredients": [
-            "rózsa",
-            "ylang-ylang",
-            "vanília"
-        ],
-        "quantity": 6,
+        "ingredients": "rózsa,ylang-ylang,vanília",
+        "quantity": "6",
         "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/black_rose_bath_bomb_2021_a40703ce_thumbnail_256.png"
     },
     {
         "id": 6,
-        "name": "Sunrise",
+        "name": "666Sunrise",
         "description": "Hajnalban fürdés",
         "size": "190g",
         "price": "26 700 Ft",
-        "ingredients": [
-            "narancs",
-            "vanília",
-            "szegfűszeg"
-        ],
-        "quantity": 7,
+        "ingredients": "narancs,vanília,szegfűszeg",
+        "quantity": "7",
         "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"
     },
     {
@@ -81,6 +46,28 @@
         ],
         "quantity": 10,
         "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 10,
+        "name": "Autumn Leaves",
+        "description": "Őszi levelek",
+        "size": "180g",
+        "price": "26 200 Ft",
+        "ingredients": [
+            "alma",
+            "füge",
+            "gesztenye"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"
+    },
+    {
+        "id": 22,
+        "name": "ddd",
+        "description": "dd",
+        "size": "ddd",
+        "price": "dd",
+        "ingredients": "dd",
+        "picture": "dd"
     }
-   
 ]
