@@ -31,7 +31,10 @@ async function fetchAndDisplayClientPage(){
                 console.log(productsInCart);
                 
                 document.getElementById('cart-container').innerHTML = ''
-                document.getElementById('cart-container').insertAdjacentHTML('beforeend',productsInCart)
+                productsInCart.forEach(data=>{
+                    const product = JSON.parse(data)
+                    document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
+                })
             });
         })
     }catch (error){
@@ -45,18 +48,17 @@ fetchAndDisplayClientPage()
 function addToCart(product) {
     productsInCart.push(product);
 }
-
-//function nicerCart (array){
-//     let productHTML=''
-//     array.forEach(product=>{
-//         productHTML +=`
-//         <h2>${product.name}</h2>
-//         <p>Description: ${product.description}</p>
-//         <p>Size: ${product.size}</p>
-//         <p>Price: ${product.price}</p>
-//         <p>Ingredients: ${product.ingredients}</p>
-//         <p>Quantity: ${product.quantity}</p>
-//         <img src="${product.picture}" alt="${product.name} Image">
-//     `})
-//     return productHTML
-// }
+function nicerCart (product){
+    let productHTML=''
+    
+        productHTML +=`
+        <h2>${product.name}</h2>
+        <p>Description: ${product.description}</p>
+        <p>Size: ${product.size}</p>
+        <p>Price: ${product.price}</p>
+        <p>Ingredients: ${product.ingredients}</p>
+        <p>Quantity: ${product.quantity}</p>
+        <img src="${product.picture}" alt="${product.name} Image">
+    `
+    return productHTML
+}
