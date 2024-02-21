@@ -10,9 +10,12 @@ ul {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    background-image: url(https://images.unsplash.com/photo-1533228705496-072ca298b122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 header {
     background-color: #3498db;
@@ -35,11 +38,25 @@ main {
 .cart-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#p-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .cart {
-    background-color: #ffffff;
+    background-color: rgb(117, 156, 163);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -55,19 +72,33 @@ main {
 .cart h2 {
     font-size: 1.8rem;
     margin-top: 0;
-    color: #3498db;
+    color: #000000;
+    padding: 5%;
+    text-align: center;
 }
 
 .cart p {
     margin: 10px 0;
-    color: #6c757d;
+    color: #000000;
+    padding: 2%;
+
+   
 }
 
 .cart img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin: 0 auto
+}
+
+.cart {
+    position: relative; /* Make the cart a positioned container */
+    background-color: rgb(117, 156, 163);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .addToCart {
@@ -75,14 +106,21 @@ main {
     border: none;
     border-radius: 5px;
     color: #ffffff;
-    cursor: pointer;
+    cursor: pointer; /* Set pointer cursor */
     padding: 10px 20px;
     transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensures the button spans the entire width of the cart */
+    border-radius: 0 0 10px 10px; /* Rounded corners only on the bottom-left and bottom-right */
 }
 
 .addToCart:hover {
     background-color: #2980b9;
 }
+
+
 
 .footer {
     background-color: #3498db;
@@ -93,3 +131,4 @@ main {
     bottom: 0;
     width: 100%;
 }
+
