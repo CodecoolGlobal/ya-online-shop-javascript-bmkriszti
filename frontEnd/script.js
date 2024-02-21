@@ -93,6 +93,7 @@ const handleUserListClick = async (event) => {
     }
 };
 
+
 const populateEditForm = (product) => {
 
     editBombForm.querySelector('#editName').value = product.name;
