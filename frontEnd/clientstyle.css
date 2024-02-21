@@ -93,7 +93,6 @@ main {
 
 .cart {
     position: relative;
-    /* Make the cart a positioned container */
     background-color: rgb(117, 156, 163);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,41 +100,29 @@ main {
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
 .addToCart {
-    background-color: #28a745;
-    /* Green */
+    background-color: #3498db;
     border: none;
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
-    /* Set pointer cursor */
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    /* Ensures the button spans the entire width of the cart */
-    border-radius: 0 0 10px 10px;
-    /* Rounded corners only on the bottom-left and bottom-right */
+    opacity: 0;
+}
+
+.cart:hover .addToCart {
+    visibility: visible;
+    opacity: 1;
 }
 
 .addToCart:hover {
-    background-color: #218838;
-    /* Darker green */
-}
-
-
-
-.footer {
-    background-color: #007bff;
-    /* Primary blue */
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #4CAF50;
 }
