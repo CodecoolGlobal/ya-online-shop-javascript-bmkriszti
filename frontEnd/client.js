@@ -9,7 +9,7 @@ async function fetchAndDisplayClientPage() {
 
         products.forEach(product => {
             const productHtml = `
-        <div class='cart'>
+        <div class='cart' id="${product.id}">
             <h2>${product.name}</h2>
             <p>Description: ${product.description}</p>
             <p>Size: ${product.size}</p>
