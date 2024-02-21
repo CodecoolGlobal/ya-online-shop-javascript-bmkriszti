@@ -35,7 +35,21 @@ main {
 .cart-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#p-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .cart {

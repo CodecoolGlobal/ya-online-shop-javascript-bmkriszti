@@ -1,1 +1,254 @@
-[{"id":6,"name":"666Sunrise","description":"Hajnalban fürdés","size":"190g","price":"26 700 Ft","ingredients":"narancs,vanília,szegfűszeg","quantity":"7","picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"},{"id":9,"name":"Winter Magic","description":"Téli varázs","size":"210g","price":"29 400 Ft","ingredients":["fahéj","narancshéj","gyömbér"],"quantity":10,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"},{"id":10,"name":"Autumn Leaves","description":"Őszi levelek","size":"180g","price":"26 200 Ft","ingredients":["alma","füge","gesztenye"],"quantity":11,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"},{"id":22,"name":"ddd","description":"dd","size":"ddd","price":"dd","ingredients":"dd","picture":"dd"}]
+[
+    {
+        "id": 43,
+        "name": "Eucalyptus Elegance",
+        "description": "Elevate with the sophistication of eucalyptus",
+        "size": "190g",
+        "price": "26 400 Ft",
+        "ingredients": [
+            "eucalyptus",
+            "mint",
+            "lemongrass"
+        ],
+        "quantity": 14,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 44,
+        "name": "Vanilla Dream",
+        "description": "Indulge in the sweet aroma of vanilla",
+        "size": "210g",
+        "price": "30 200 Ft",
+        "ingredients": [
+            "vanilla",
+            "almond",
+            "caramel"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 10,
+        "name": "Autumn Leaves",
+        "description": "Őszi levelek",
+        "size": "180g",
+        "price": "26 200 Ft",
+        "ingredients": [
+            "alma",
+            "füge",
+            "gesztenye"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"
+    },
+    {
+        "id": 27,
+        "name": "Summer Sunset",
+        "description": "A warm embrace of summer evenings",
+        "size": "220g",
+        "price": "34 900 Ft",
+        "ingredients": [
+            "orange peel",
+            "coconut",
+            "vanilla"
+        ],
+        "quantity": 8,
+        "picture": "https://www.poison.org/-/media/images/shared/articles/woman-putting-bath-bomb-into-water-194.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Mystic Garden",
+        "description": "Enchanting floral experience",
+        "size": "200g",
+        "price": "30 500 Ft",
+        "ingredients": [
+            "rose petals",
+            "lavender",
+            "jasmine"
+        ],
+        "quantity": 15,
+        "picture": "https://example.com/mystic_garden.png"
+    },
+    {
+        "id": 29,
+        "name": "Tropical Oasis",
+        "description": "Escape to a tropical paradise",
+        "size": "180g",
+        "price": "27 800 Ft",
+        "ingredients": [
+            "pineapple",
+            "mango",
+            "coconut"
+        ],
+        "quantity": 12,
+        "picture": "https://example.com/tropical_oasis.png"
+    },
+    {
+        "id": 30,
+        "name": "Moonlit Serenity",
+        "description": "Tranquil nights under the moonlight",
+        "size": "210g",
+        "price": "31 200 Ft",
+        "ingredients": [
+            "lavender",
+            "chamomile",
+            "ylang-ylang"
+        ],
+        "quantity": 10,
+        "picture": "https://example.com/moonlit_serenity.png"
+    },
+    {
+        "id": 31,
+        "name": "Golden Elegance",
+        "description": "Luxurious and opulent bath experience",
+        "size": "240g",
+        "price": "38 500 Ft",
+        "ingredients": [
+            "gold leaf",
+            "vanilla",
+            "bergamot"
+        ],
+        "quantity": 9,
+        "picture": "https://example.com/golden_elegance.png"
+    },
+    {
+        "id": 32,
+        "name": "Wildflower Bliss",
+        "description": "Bask in the beauty of wildflowers",
+        "size": "190g",
+        "price": "26 900 Ft",
+        "ingredients": [
+            "wild rose",
+            "honeysuckle",
+            "lemongrass"
+        ],
+        "quantity": 11,
+        "picture": "https://example.com/wildflower_bliss.png"
+    },
+    {
+        "id": 33,
+        "name": "Citrus Zing",
+        "description": "Awaken your senses with citrus freshness",
+        "size": "200g",
+        "price": "29 400 Ft",
+        "ingredients": [
+            "lemon",
+            "lime",
+            "grapefruit"
+        ],
+        "quantity": 14,
+        "picture": "https://example.com/citrus_zing.png"
+    },
+    {
+        "id": 34,
+        "name": "Exotic Spice",
+        "description": "A blend of exotic spices for a warm bath",
+        "size": "220g",
+        "price": "32 000 Ft",
+        "ingredients": [
+            "cinnamon",
+            "cardamom",
+            "ginger"
+        ],
+        "quantity": 13,
+        "picture": "https://example.com/exotic_spice.png"
+    },
+    {
+        "id": 35,
+        "name": "Cherry Blossom Dreams",
+        "description": "Indulge in the beauty of cherry blossoms",
+        "size": "210g",
+        "price": "31 900 Ft",
+        "ingredients": [
+            "cherry blossom",
+            "rosewater",
+            "jasmine"
+        ],
+        "quantity": 12,
+        "picture": "https://example.com/cherry_blossom_dreams.png"
+    },
+    {
+        "id": 36,
+        "name": "Lavender Tranquility",
+        "description": "Relaxing lavender for a peaceful bath",
+        "size": "180g",
+        "price": "26 300 Ft",
+        "ingredients": [
+            "lavender",
+            "chamomile",
+            "vanilla"
+        ],
+        "quantity": 15,
+        "picture": "https://example.com/lavender_tranquility.png"
+    },
+    {
+        "id": 37,
+        "name": "Sparkling Citrus Splash",
+        "description": "Energize with the sparkle of citrus",
+        "size": "190g",
+        "price": "28 500 Ft",
+        "ingredients": [
+            "orange",
+            "grapefruit",
+            "lemon"
+        ],
+        "quantity": 11,
+        "picture": "https://example.com/sparkling_citrus_splash.png"
+    },
+    {
+        "id": 38,
+        "name": "Midnight Jasmine",
+        "description": "Experience the allure of midnight jasmine",
+        "size": "200g",
+        "price": "30 800 Ft",
+        "ingredients": [
+            "jasmine",
+            "sandalwood",
+            "ylang-ylang"
+        ],
+        "quantity": 10,
+        "picture": "https://example.com/midnight_jasmine.png"
+    },
+    {
+        "id": 39,
+        "name": "Soothing Chamomile",
+        "description": "Gentle chamomile for a calming bath",
+        "size": "180g",
+        "price": "27 200 Ft",
+        "ingredients": [
+            "chamomile",
+            "calendula",
+            "lavender"
+        ],
+        "quantity": 14,
+        "picture": "https://example.com/soothing_chamomile.png"
+    },
+    {
+        "id": 40,
+        "name": "Crisp Apple Delight",
+        "description": "A burst of freshness with crisp apples",
+        "size": "210g",
+        "price": "29 700 Ft",
+        "ingredients": [
+            "apple",
+            "mint",
+            "green tea"
+        ],
+        "quantity": 13,
+        "picture": "https://example.com/crisp_apple_delight.png"
+    },
+    {
+        "id": 41,
+        "name": "Mango Tango",
+        "description": "Dance with the tropical vibes of mango",
+        "size": "220g",
+        "price": "31 600 Ft",
+        "ingredients": [
+            "mango",
+            "coconut",
+            "lime"
+        ],
+        "quantity": 12,
+        "picture": "https://example.com/mango_tango.png"
+    }
+]

@@ -1,15 +1,14 @@
-let productsInCart=[]
+let productsInCart = []
 
-
-async function fetchAndDisplayClientPage(){
-    try{
-        const response = await fetch ('/api/bath')
+async function fetchAndDisplayClientPage() {
+    try {
+        const response = await fetch('/api/bath')
         const products = await response.json()
 
         console.log(products)
-        
+
         products.forEach(product => {
-        const productHtml=`
+            const productHtml = `
         <div class='cart'>
             <h2>${product.name}</h2>
             <p>Description: ${product.description}</p>
@@ -29,29 +28,29 @@ async function fetchAndDisplayClientPage(){
                 const productData = button.value;
                 addToCart(productData);
                 console.log(productsInCart);
-                
+
                 document.getElementById('cart-container').innerHTML = ''
-                productsInCart.forEach(data=>{
+                productsInCart.forEach(data => {
                     const product = JSON.parse(data)
                     document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
                 })
             });
         })
-    }catch (error){
+    } catch (error) {
         console.log(error)
-        alert (error)
+        alert(error)
     }
-}    
+}
 
 fetchAndDisplayClientPage()
 
 function addToCart(product) {
     productsInCart.push(product);
 }
-function nicerCart (product){
-    let productHTML=''
-    
-        productHTML +=`
+function nicerCart(product) {
+    let productHTML = ''
+
+    productHTML += `
         <h2>${product.name}</h2>
         <p>Description: ${product.description}</p>
         <p>Size: ${product.size}</p>
@@ -62,3 +61,5 @@ function nicerCart (product){
     `
     return productHTML
 }
+
+console.log(productsInCart)
