@@ -124,7 +124,8 @@ app.post('/api/products', async (req, res) => {
 
 
 app.get('/client', async (req, res) => {
-    res.sendFile(path.join(__dirname, 'main.html'));
+    console.log(__dirname)
+    res.sendFile(path.join(dirname, "../frontEnd", 'client.html'));
 });
 
 

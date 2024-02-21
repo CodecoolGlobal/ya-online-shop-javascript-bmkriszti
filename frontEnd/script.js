@@ -24,7 +24,11 @@ const renderBathBombHTML = async () => {
         const bombs = await fetchData("/api/bath");
         const liElements = bombs.map(bomb => `
     <li>
-        <span>${bomb.name}</span>
+        <span>
+        <p>Product name: ${bomb.name}</p>
+        <p>Product id: ${bomb.id}</p>
+        <p>Product price: ${bomb.price}</p>
+        </span>
         <button class="edit" data-bombid="${bomb.id}">Edit</button>
         <button class="delete" data-bombid="${bomb.id}">Delete</button>
     </li>
@@ -196,4 +200,4 @@ window.addEventListener("load", async () => {
 
 window.addEventListener("load", main);
 
-aa
+aaa
