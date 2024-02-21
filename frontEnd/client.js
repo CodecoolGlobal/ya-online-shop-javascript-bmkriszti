@@ -1,9 +1,6 @@
-let productsInCart=[]
-
-
-async function fetchAndDisplayClientPage(){
-    try{
-        const response = await fetch ('/api/bath')
+const fetchTheProducts = async function () {
+    try {
+        const response = await fetch('/api/bath')
         const products = await response.json()
 
         console.log(products)
@@ -18,45 +15,51 @@ async function fetchAndDisplayClientPage(){
             <p>Ingredients: ${product.ingredients}</p>
             <p>Quantity: ${product.quantity}</p>
             <img src="${product.picture}" alt="${product.name} Image">
-            <button class="addToCart" value='${JSON.stringify(product)}'>Add to cart</button>
-        </div>
-            `
-            document.getElementById('p-container').insertAdjacentHTML('beforeend', productHtml)
-
-        });
-        document.querySelectorAll('.addToCart').forEach(button => {
-            button.addEventListener('click', () => {
-                const productData = button.value;
-                addToCart(productData);
-                console.log(productsInCart);
-                
-                document.getElementById('cart-container').innerHTML = ''
-                document.getElementById('cart-container').insertAdjacentHTML('beforeend',productsInCart)
-            });
+            <button id="addToCart">Add to cart</button>
+        `;
+            productContainer.appendChild(productsDiv)
         })
-    }catch (error){
+    } catch (error) {
         console.log(error)
-        alert (error)
+        alert(error)
     }
 }    
 
-fetchAndDisplayClientPage()
+fetchTheProducts()
 
-function addToCart(product) {
-    productsInCart.push(product);
-}
+// async function fetchClient() {
+//     try {
+//         const response = await fetch(`http://localhost:8080/client`);
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+//         const products = await response.json()
 
-//function nicerCart (array){
-//     let productHTML=''
-//     array.forEach(product=>{
-//         productHTML +=`
-//         <h2>${product.name}</h2>
-//         <p>Description: ${product.description}</p>
-//         <p>Size: ${product.size}</p>
-//         <p>Price: ${product.price}</p>
-//         <p>Ingredients: ${product.ingredients}</p>
-//         <p>Quantity: ${product.quantity}</p>
-//         <img src="${product.picture}" alt="${product.name} Image">
-//     `})
-//     return productHTML
+//         console.log(products)
+
+//         const productContainer = document.getElementById('container')
+
+//         products.forEach(product => {
+//             const productsDiv = document.createElement('div')
+//             productsDiv.classList.add('product')
+//             productsDiv.innerHTML = `
+//             <h2>${product.name}</h2>
+//             <p>Description: ${product.description}</p>
+//             <p>Size: ${product.size}</p>
+//             <p>Price: ${product.price}</p>
+//             <p>Ingredients: ${product.ingredients}</p>
+//             <p>Quantity: ${product.quantity}</p>
+//             <img src="${product.picture}" alt="${product.name} Image">
+//             <button id="addToCart">Add to cart</button>
+//         `;
+//             productContainer.appendChild(productsDiv)
+//         })
+//     } catch (error) {
+//         console.log(error)
+//         alert(error)
+//     }
 // }
+
+
+
+// fetchClient()

@@ -24,7 +24,11 @@ const renderBathBombHTML = async () => {
         const bombs = await fetchData("/api/bath");
         const liElements = bombs.map(bomb => `
     <li>
-        <span>${bomb.name}</span>
+        <span>
+        <p>Product name: ${bomb.name}</p>
+        <p>Product id: ${bomb.id}</p>
+        <p>Product price: ${bomb.price}</p>
+        </span>
         <button class="edit" data-bombid="${bomb.id}">Edit</button>
         <button class="delete" data-bombid="${bomb.id}">Delete</button>
     </li>
@@ -58,9 +62,9 @@ document.querySelector("#addBombForm").addEventListener("submit", async (e) => {
             body: JSON.stringify(sendThis)
         })
         const respData = await resp.json()
-        alert(respData.message)
+        // alert(respData.message)
     } catch (error) {
-        alert(error)
+        // alert(error)
     }
 })
 
@@ -68,6 +72,7 @@ document.querySelector("#addBombForm").addEventListener("submit", async (e) => {
 const main = async () => {
     const rootElement = document.getElementById("root");
     try {
+
         const bathBombHTML = await renderBathBombHTML();
         rootElement.insertAdjacentHTML("beforeend", bathBombHTML);
     } catch (error) {
@@ -81,13 +86,20 @@ const renderBombList = async () => {
 };
 
 
-const handleUserListClick = async (event) => {
+const handleProductListClick = async (event) => {
     const target = event.target;
     const bombId = target.dataset.bombid;
+    console.log("Clicked bombId:", bombId);
 
-    console.log("Clicked bombId:", bombId); // Log the bombId to check its value
-
-    if (target.classList.contains('delete')) {
+    if (target.classList.contains('edit')) {
+        try {
+            const productData = await editProductData(bombId);
+            console.log(productData)
+            populateEditForm(productData);
+        } catch (error) {
+            console.error('Error handling edit click:', error.message);
+        }
+    } else if (target.classList.contains('delete')) {
         await deleteUserData(bombId);
         await renderBombList();
     }
@@ -95,21 +107,81 @@ const handleUserListClick = async (event) => {
 
 
 const populateEditForm = (product) => {
+    if (product) {
+        editBombForm.querySelector('#editId').value = product.id;
+        editBombForm.querySelector('#editName').value = product.name;
+        editBombForm.querySelector('#editDescription').value = product.description;
+        editBombForm.querySelector('#editSize').value = product.size;
+        editBombForm.querySelector('#editPrice').value = product.price;
+        editBombForm.querySelector('#EditIngredients').value = product.ingredients;
+        editBombForm.querySelector('#EditQuantity').value = product.quantity;
+        editBombForm.querySelector('#EditPicture').value = product.picture;
+        editBombForm.dataset.bombid = product.id;
+    } else {
+        console.log('Product data not found');
+    }
+};
 
-    editBombForm.querySelector('#editName').value = product.name;
-    editBombForm.querySelector('#editDescription').value = product.description;
-    editBombForm.querySelector('#editSize').value = product.size;
-    editBombForm.querySelector('#editPrice').value = product.price;
-    editBombForm.querySelector('#EditIngredients').value = product.ingredients.join(', ');
-    editBombForm.querySelector('#EditQuantity').value = product.quantity;
-    editBombForm.querySelector('#EditPicture').value = product.picture;
+const editProductData = async (bombId, updatedProduct) => {
+    try {
+        const response = await fetch(`http://localhost:8080/api/products/${bombId}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedProduct),
+        });
 
-    // Set a data attribute on the edit form to store the user ID
-    editBombForm.dataset.userid = product.id;
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const productData = await response.json();
+        return productData;
+    } catch (error) {
+        console.error(`Error updating product data: ${error.message}`);
+        throw error;
+    }
 };
 
 const deleteUserData = async (bombId) => {
     await fetch(`http://localhost:8080/api/products/${bombId}`, { method: 'DELETE' });
+};
+
+const handleEditUserSubmit = async (e) => {
+    e.preventDefault();
+    const productId = editBombForm.dataset.bombid;
+    console.log(productId)
+    const updatedProduct = {
+        id: parseInt(productId),
+        name: e.target.querySelector('#editName').value,
+        description: e.target.querySelector('#editDescription').value,
+        size: e.target.querySelector('#editSize').value,
+        price: e.target.querySelector('#editPrice').value,
+        ingredients: e.target.querySelector('#EditIngredients').value,
+        quantity: e.target.querySelector('#EditQuantity').value,
+        picture: e.target.querySelector('#EditPicture').value,
+    };
+    try {
+        let method;
+        if (productId) {
+            method = 'PATCH';
+        }
+        const response = await fetch(`/api/products/${productId ? `${productId}` : ''}`, {
+            method,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedProduct),
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        console.log('Product updated/created successfully:', result);
+    } catch (error) {
+        console.error('Error updating/creating product:', error.message);
+    }
 };
 
 
@@ -123,7 +195,10 @@ const formDataToObject = (formData) => {
 
 window.addEventListener("load", async () => {
     await renderBombList();
-    userListElement.addEventListener('click', handleUserListClick);
+    userListElement.addEventListener('click', handleProductListClick);
+    editBombForm.addEventListener('submit', handleEditUserSubmit)
 });
 
 window.addEventListener("load", main);
+
+aaaa

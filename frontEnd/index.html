@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BathBomb</title>
-</head>
+    <link rel="stylesheet" href="/style.css">
 
 <body>
-    <h2> Editor Page</h2>
+    <h1> Editor Page </h1>
+    <h2> List Of Available Products </h2>
     <div id="root"></div>
 
-    <h2>Edit</h2>
+    <h2> Edit A Product </h2>
     <form id="editBombForm">
+        <label for="editId">ID:</label>
+        <input type="text" id="editId" name="id">
         <label for="editName">Name:</label>
-        <input type="text" id="editName" name="name" required>
+        <input type="text" id="editName" name="name">
         <label for="editDescription">Description</label>
         <input type="text" id="editDescription" name="descr">
         <label for="editSize">Size:</label>
-        <input type="text" id="editSize" name="size" required>
+        <input type="text" id="editSize" name="size">
         <label for="editPrice">Price:</label>
-        <input type="text" id="editPrice" name="price" required>
+        <input type="text" id="editPrice" name="price">
         <label for="EditIngredients">Ingredients:</label>
-        <input type="text" id="EditIngredients" name="ingredients" required>
+        <input type="text" id="EditIngredients" name="ingredients">
         <label for="EditQuantity">Quantity:</label>
-        <input type="text" id="EditQuantity" name="quantity" required>
+        <input type="text" id="EditQuantity" name="quantity">
         <label for="EditPicture">Picture:</label>
-        <input type="text" id="editPicture" name="picture" required>
+        <input type="text" id="editPicture" name="picture">
         <button type="submit">Save Changes</button>
     </form>
 
