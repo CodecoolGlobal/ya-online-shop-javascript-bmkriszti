@@ -10,12 +10,15 @@ ul {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #5573fa;
+    /* Light grayish background */
+    color: #343a40;
+    /* Dark gray text */
 }
 
 header {
-    background-color: #3498db;
+    background-color: #007bff;
+    /* Primary blue */
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -39,7 +42,7 @@ main {
     margin-top: 1.25rem;
     max-width: 75rem;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 #p-container {
@@ -49,11 +52,12 @@ main {
     margin-top: 1.25rem;
     max-width: 75rem;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .cart {
     background-color: #ffffff;
+    /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -69,12 +73,14 @@ main {
 .cart h2 {
     font-size: 1.8rem;
     margin-top: 0;
-    color: #3498db;
+    color: #007bff;
+    /* Primary blue */
 }
 
 .cart p {
     margin: 10px 0;
     color: #6c757d;
+    /* Grayish text */
 }
 
 .cart img {
@@ -85,7 +91,8 @@ main {
 }
 
 .addToCart {
-    background-color: #3498db;
+    background-color: #28a745;
+    /* Green */
     border: none;
     border-radius: 5px;
     color: #ffffff;
@@ -95,11 +102,13 @@ main {
 }
 
 .addToCart:hover {
-    background-color: #2980b9;
+    background-color: #218838;
+    /* Darker green */
 }
 
 .footer {
-    background-color: #3498db;
+    background-color: #007bff;
+    /* Primary blue */
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
