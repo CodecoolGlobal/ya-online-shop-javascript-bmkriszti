@@ -45,15 +45,5 @@
         "price": "dd",
         "ingredients": "dd",
         "picture": "dd"
-    },
-    {
-        "id": 26,
-        "name": "Kriszti",
-        "description": "Ez a lány nagyon tudja a tutit ",
-        "size": "1000",
-        "price": "priceless",
-        "ingredients": "szőke haj, szép arc",
-        "quantity": "1",
-        "picture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/410911726_6985677968145493_4283282159465515103_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=SkSybKFnnnYAX9WrRBO&_nc_ht=scontent.fbud7-4.fna&oh=00_AfDl6a3VRof5KLA0VJKBiYv6SjwsmsE-h6ImGfxpWTv6bw&oe=65DA9B10"
     }
 ]

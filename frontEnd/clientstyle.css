@@ -1,21 +1,28 @@
-/* General styles */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
+    color: #333;
 }
 
 header {
-    background-color: #343a40;
+    background-color: #3498db;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 main {
@@ -25,54 +32,46 @@ main {
     padding: 20px;
 }
 
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-/* Product card styles */
-.product {
+.cart {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease-in-out;
-    
 }
 
-.product:hover {
-    transform: translateY(-5px);
+.cart:hover {
+    transform: scale(1.05);
 }
 
-.product img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-content {
-    padding: 20px;
-}
-
-.product h2 {
+.cart h2 {
+    font-size: 1.8rem;
     margin-top: 0;
-    font-size: 1.5rem;
+    color: #3498db;
 }
 
-.product p {
+.cart p {
     margin: 10px 0;
     color: #6c757d;
 }
 
-.product button {
-    background-color: #007bff;
+.cart img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.addToCart {
+    background-color: #3498db;
     border: none;
     border-radius: 5px;
     color: #ffffff;
@@ -81,6 +80,16 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.product button:hover {
-    background-color: #0056b3;
+.addToCart:hover {
+    background-color: #2980b9;
+}
+
+.footer {
+    background-color: #3498db;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
