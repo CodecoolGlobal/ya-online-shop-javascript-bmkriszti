@@ -4,14 +4,14 @@ import fs from "fs/promises";
 import path, { parse } from "path";
 import url from "url";
 
-const filename = url.fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const app = express()
 app.use(express.json());
 
-app.use(express.static(path.join(dirname, "../frontEnd")));
+app.use(express.static(path.join(__dirname, "../frontEnd")));
 
 
 app.get("/api/bath", async (req, res) => {
@@ -66,7 +66,6 @@ app.patch('/api/products/:id', async (req, res) => {
 });
 
 
-
 app.post('/api/products', async (req, res) => {
     try {
         const unparsedData = await fs.readFile("./data.json", 'utf8')
@@ -92,13 +91,15 @@ app.post('/api/products', async (req, res) => {
         console.log(error)
         res.status(500).json({ message: "Ups, unexpected error" })
     }
-})
-
-
-app.get('/client', async (req, res) => {
-    res.sendFile(path.join(__dirname, 'main.html'));
 });
 
+app.get('/client', async (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontEnd', 'client.html'))
+});
+
+app.get("/editor", async (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontEnd', 'index.html'))
+})
 
 app.listen(8080, () => {
     console.log("Server running on http://localhost:8080");

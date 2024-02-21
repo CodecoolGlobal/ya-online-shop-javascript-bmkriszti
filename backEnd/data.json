@@ -1,1 +1,49 @@
-[{"id":6,"name":"666Sunrise","description":"Hajnalban fürdés","size":"190g","price":"26 700 Ft","ingredients":"narancs,vanília,szegfűszeg","quantity":"7","picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"},{"id":9,"name":"Winter Magic","description":"Téli varázs","size":"210g","price":"29 400 Ft","ingredients":["fahéj","narancshéj","gyömbér"],"quantity":10,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"},{"id":10,"name":"Autumn Leaves","description":"Őszi levelek","size":"180g","price":"26 200 Ft","ingredients":["alma","füge","gesztenye"],"quantity":11,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"},{"id":22,"name":"ddd","description":"dd","size":"ddd","price":"dd","ingredients":"dd","picture":"dd"}]
+[
+    {
+        "id": 6,
+        "name": "666Sunrise",
+        "description": "Hajnalban fürdés",
+        "size": "190g",
+        "price": "26 700 Ft",
+        "ingredients": "narancs,vanília,szegfűszeg",
+        "quantity": "7",
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 9,
+        "name": "Winter Magic",
+        "description": "Téli varázs",
+        "size": "210g",
+        "price": "29 400 Ft",
+        "ingredients": [
+            "fahéj",
+            "narancshéj",
+            "gyömbér"
+        ],
+        "quantity": 10,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 10,
+        "name": "Autumn Leaves",
+        "description": "Őszi levelek",
+        "size": "180g",
+        "price": "26 200 Ft",
+        "ingredients": [
+            "alma",
+            "füge",
+            "gesztenye"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"
+    },
+    {
+        "id": 22,
+        "name": "ddd",
+        "description": "dd",
+        "size": "ddd",
+        "price": "dd",
+        "ingredients": "dd",
+        "picture": "dd"
+    }
+]
