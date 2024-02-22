@@ -62,3 +62,4 @@ function nicerCart (product){
     `
     return productHTML
 }
+ export {productsInCart, fetchAndDisplayClientPage, addToCart, nicerCart};
