@@ -23,7 +23,7 @@ const renderBathBombHTML = async () => {
     try {
         const bombs = await fetchData("/api/bath");
         const liElements = bombs.map(bomb => `
-    <li>
+    <li style="display: inline-block; margin-right: 10px;">
         <span>
         <p>Product name: ${bomb.name}</p>
         <p>Product id: ${bomb.id}</p>
@@ -201,4 +201,4 @@ window.addEventListener("load", async () => {
 
 window.addEventListener("load", main);
 
-aaaa
+aaaaaa

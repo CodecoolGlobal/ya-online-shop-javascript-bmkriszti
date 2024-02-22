@@ -1,16 +1,15 @@
-let productsInCart=[]
+let productsInCart = []
 
-
-async function fetchAndDisplayClientPage(){
-    try{
-        const response = await fetch ('/api/bath')
+async function fetchAndDisplayClientPage() {
+    try {
+        const response = await fetch('/api/bath')
         const products = await response.json()
 
         console.log(products)
-        
+
         products.forEach(product => {
-        const productHtml=`
-        <div class='cart'>
+            const productHtml = `
+        <div class='cart' id="${product.id}">
             <h2>${product.name}</h2>
             <p>Description: ${product.description}</p>
             <p>Size: ${product.size}</p>
@@ -29,37 +28,36 @@ async function fetchAndDisplayClientPage(){
                 const productData = button.value;
                 addToCart(productData);
                 console.log(productsInCart);
-                
+
                 document.getElementById('cart-container').innerHTML = ''
-                productsInCart.forEach(data=>{
+                let totalPrice = 0
+                productsInCart.forEach(data => {
                     const product = JSON.parse(data)
                     document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
+                    totalPrice += parseInt(product.price)
                 })
+                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>`);
             });
         })
-    }catch (error){
+    } catch (error) {
         console.log(error)
-        alert (error)
+        alert(error)
     }
-}    
+}
 
 fetchAndDisplayClientPage()
 
 function addToCart(product) {
     productsInCart.push(product);
 }
-function nicerCart (product){
-    let productHTML=''
-    
-        productHTML +=`
-        <h2>${product.name}</h2>
-        <p>Description: ${product.description}</p>
-        <p>Size: ${product.size}</p>
-        <p>Price: ${product.price}</p>
-        <p>Ingredients: ${product.ingredients}</p>
-        <p>Quantity: ${product.quantity}</p>
-        <img src="${product.picture}" alt="${product.name} Image">
-    `
-    return productHTML
+
+function nicerCart(product) {
+    let productHTML = ''
+
+    productHTML += `
+    <h2>${product.name}</h2>
+    <p>Price: ${product.price}</p>
+`;
+
+return productHTML;
 }
- export {productsInCart, fetchAndDisplayClientPage, addToCart, nicerCart};

@@ -1,1 +1,254 @@
-[{"id":6,"name":"666Sunrise","description":"Hajnalban fürdés","size":"190g","price":"26 700 Ft","ingredients":"narancs,vanília,szegfűszeg","quantity":"7","picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"},{"id":9,"name":"Winter Magic","description":"Téli varázs","size":"210g","price":"29 400 Ft","ingredients":["fahéj","narancshéj","gyömbér"],"quantity":10,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"},{"id":10,"name":"Autumn Leaves","description":"Őszi levelek","size":"180g","price":"26 200 Ft","ingredients":["alma","füge","gesztenye"],"quantity":11,"picture":"https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"},{"id":22,"name":"ddd","description":"dd","size":"ddd","price":"dd","ingredients":"dd","picture":"dd"}]
+[
+    {
+        "id": 43,
+        "name": "Eucalyptus Elegance",
+        "description": "Elevate with the sophistication of eucalyptus",
+        "size": "190g",
+        "price": 26400,
+        "ingredients": [
+            "eucalyptus",
+            "mint",
+            "lemongrass"
+        ],
+        "quantity": 14,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/twilight_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 44,
+        "name": "Vanilla Dream",
+        "description": "Indulge in the sweet aroma of vanilla",
+        "size": "210g",
+        "price": 30200,
+        "ingredients": [
+            "vanilla",
+            "almond",
+            "caramel"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 10,
+        "name": "Autumn Leaves",
+        "description": "Őszi levelek",
+        "size": "180g",
+        "price": 26200,
+        "ingredients": [
+            "alma",
+            "füge",
+            "gesztenye"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"
+    },
+    {
+        "id": 27,
+        "name": "Summer Sunset",
+        "description": "A warm embrace of summer evenings",
+        "size": "220g",
+        "price": 34900,
+        "ingredients": [
+            "orange peel",
+            "coconut",
+            "vanilla"
+        ],
+        "quantity": 8,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/dragons_egg_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 28,
+        "name": "Mystic Garden",
+        "description": "Enchanting floral experience",
+        "size": "200g",
+        "price": 30500,
+        "ingredients": [
+            "rose petals",
+            "lavender",
+            "jasmine"
+        ],
+        "quantity": 15,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/big_squeeze_bath_bomb_2023_f9d7176d_thumbnail_256.png"
+    },
+    {
+        "id": 29,
+        "name": "Tropical Oasis",
+        "description": "Escape to a tropical paradise",
+        "size": "180g",
+        "price": 27800,
+        "ingredients": [
+            "pineapple",
+            "mango",
+            "coconut"
+        ],
+        "quantity": 12,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/cheap_cheap_bath_bomb_2024_50839dc2_thumbnail_256.png"
+    },
+    {
+        "id": 30,
+        "name": "Moonlit Serenity",
+        "description": "Tranquil nights under the moonlight",
+        "size": "210g",
+        "price": 50200,
+        "ingredients": [
+            "lavender",
+            "chamomile",
+            "ylang-ylang"
+        ],
+        "quantity": 10,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/goddess_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 31,
+        "name": "Golden Elegance",
+        "description": "Luxurious and opulent bath experience",
+        "size": "240g",
+        "price": 38500,
+        "ingredients": [
+            "gold leaf",
+            "vanilla",
+            "bergamot"
+        ],
+        "quantity": 9,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/golden_egg_bath_bomb_day_2024_c0014730_thumbnail_256.png"
+    },
+    {
+        "id": 32,
+        "name": "Wildflower Bliss",
+        "description": "Bask in the beauty of wildflowers",
+        "size": "190g",
+        "price": 50900,
+        "ingredients": [
+            "wild rose",
+            "honeysuckle",
+            "lemongrass"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/peachy_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 33,
+        "name": "Citrus Zing",
+        "description": "Awaken your senses with citrus freshness",
+        "size": "200g",
+        "price": 29400,
+        "ingredients": [
+            "lemon",
+            "lime",
+            "grapefruit"
+        ],
+        "quantity": 14,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/sakura_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 34,
+        "name": "Exotic Spice",
+        "description": "A blend of exotic spices for a warm bath",
+        "size": "220g",
+        "price": 32000,
+        "ingredients": [
+            "cinnamon",
+            "cardamom",
+            "ginger"
+        ],
+        "quantity": 13,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/sex_bomb_bath_bomb_2021_thumbnail_256.png"
+    },
+    {
+        "id": 35,
+        "name": "Cherry Dreams",
+        "description": "Indulge in the beauty of cherry blossoms",
+        "size": "210g",
+        "price": 31900,
+        "ingredients": [
+            "cherry blossom",
+            "rosewater",
+            "jasmine"
+        ],
+        "quantity": 12,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/love_letter_bath_bomb_2023_df86b3cf_thumbnail_256.png"
+    },
+    {
+        "id": 36,
+        "name": "Lavender Tranquility",
+        "description": "Relaxing lavender for a peaceful bath",
+        "size": "180g",
+        "price": 26300,
+        "ingredients": [
+            "lavender",
+            "chamomile",
+            "vanilla"
+        ],
+        "quantity": 15,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/inner_dragon_bath_bomb_2023__3d711a81_thumbnail_256.png"
+    },
+    {
+        "id": 37,
+        "name": "Sparkling Citrus",
+        "description": "Energize with the sparkle of citrus",
+        "size": "190g",
+        "price": 28500,
+        "ingredients": [
+            "orange",
+            "grapefruit",
+            "lemon"
+        ],
+        "quantity": 11,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/unicorn_poop_bath_bomb_japan_lush_labs_box_ecom_image_2021_copy_thumbnail_25.png"
+    },
+    {
+        "id": 38,
+        "name": "Midnight Jasmine",
+        "description": "Experience the allure of midnight jasmine",
+        "size": "200g",
+        "price": 30800,
+        "ingredients": [
+            "jasmine",
+            "sandalwood",
+            "ylang-ylang"
+        ],
+        "quantity": 10,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/tisty_tosty_bath_bomb_2021_12a771bf_thumbnail_256.png"
+    },
+    {
+        "id": 39,
+        "name": "Soothing Chamomile",
+        "description": "Gentle chamomile for a calming bath",
+        "size": "180g",
+        "price": 27200,
+        "ingredients": [
+            "chamomile",
+            "calendula",
+            "lavender"
+        ],
+        "quantity": 14,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/black_rose_bath_bomb_2021_a40703ce_thumbnail_256.png"
+    },
+    {
+        "id": 40,
+        "name": "Crisp Apple",
+        "description": "A burst of freshness with crisp apples",
+        "size": "210g",
+        "price": 29700,
+        "ingredients": [
+            "apple",
+            "mint",
+            "green tea"
+        ],
+        "quantity": 13,
+        "picture": "https://unicorn.lush.com/media/thumbnails/products/love_bug_bath_bomb_2023_a19b5f0a_thumbnail_256.png"
+    },
+    {
+        "id": 41,
+        "name": "Last Tango",
+        "description": "Dance with the tropical vibes of mango",
+        "size": "220g",
+        "price": 31600,
+        "ingredients": [
+            "mango",
+            "coconut",
+            "lime"
+        ],
+        "quantity": 12,
+        "picture": "https://www.lush.com/cdn-cgi/image/width=256,f=auto,quality=75/https://unicorn.lush.com/media/thumbnails/products/chartity_pot_naked_paw_20201_thumbnail_256.png"
+    }
+]
