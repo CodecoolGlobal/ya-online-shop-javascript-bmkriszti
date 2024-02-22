@@ -27,8 +27,7 @@ async function fetchAndDisplayClientPage() {
             button.addEventListener('click', () => {
                 const productData = button.value;
                 addToCart(productData);
-                console.log(productsInCart);
-
+             
                 document.getElementById('cart-container').innerHTML = ''
                 let totalPrice = 0
                 productsInCart.forEach(data => {
@@ -38,6 +37,9 @@ async function fetchAndDisplayClientPage() {
                 })
                 document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>
                                                                                             <button id="buy">Go to cart</button>`);
+                document.getElementById('buy').addEventListener('click', ()=>{
+                    window.location.href = 'http://localhost:8080/cart'
+                })
             });
         })
     } catch (error) {
@@ -50,6 +52,8 @@ fetchAndDisplayClientPage()
 
 function addToCart(product) {
     productsInCart.push(product);
+
+localStorage.setItem('productsInCart', JSON.stringify(productsInCart)); 
 }
 
 function nicerCart(product) {
@@ -62,3 +66,4 @@ function nicerCart(product) {
 
 return productHTML;
 }
+
