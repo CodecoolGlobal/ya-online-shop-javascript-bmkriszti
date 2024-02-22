@@ -36,7 +36,8 @@ async function fetchAndDisplayClientPage() {
                     document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
                     totalPrice += parseInt(product.price)
                 })
-                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>`);
+                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>
+                                                                                            <button id="buy">Go to cart</button>`);
             });
         })
     } catch (error) {
