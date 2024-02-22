@@ -30,10 +30,14 @@ async function fetchAndDisplayClientPage() {
                 console.log(productsInCart);
 
                 document.getElementById('cart-container').innerHTML = ''
+                let totalPrice = 0
                 productsInCart.forEach(data => {
                     const product = JSON.parse(data)
                     document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
+                    totalPrice += parseInt(product.price)
                 })
+                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>
+                                                                                            <button id="buy">Go to cart</button>`);
             });
         })
     } catch (error) {
@@ -47,19 +51,14 @@ fetchAndDisplayClientPage()
 function addToCart(product) {
     productsInCart.push(product);
 }
+
 function nicerCart(product) {
     let productHTML = ''
 
     productHTML += `
-        <h2>${product.name}</h2>
-        <p>Description: ${product.description}</p>
-        <p>Size: ${product.size}</p>
-        <p>Price: ${product.price}</p>
-        <p>Ingredients: ${product.ingredients}</p>
-        <p>Quantity: ${product.quantity}</p>
-        <img src="${product.picture}" alt="${product.name} Image">
-    `
-    return productHTML
-}
+    <h2>${product.name}</h2>
+    <p>Price: ${product.price}</p>
+`;
 
-console.log(productsInCart)
+return productHTML;
+}

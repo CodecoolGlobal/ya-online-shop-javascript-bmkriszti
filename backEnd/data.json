@@ -4,7 +4,7 @@
         "name": "Eucalyptus Elegance",
         "description": "Elevate with the sophistication of eucalyptus",
         "size": "190g",
-        "price": "26 400 Ft",
+        "price": 26400,
         "ingredients": [
             "eucalyptus",
             "mint",
@@ -18,7 +18,7 @@
         "name": "Vanilla Dream",
         "description": "Indulge in the sweet aroma of vanilla",
         "size": "210g",
-        "price": "30 200 Ft",
+        "price": 30200,
         "ingredients": [
             "vanilla",
             "almond",
@@ -32,7 +32,7 @@
         "name": "Autumn Leaves",
         "description": "Őszi levelek",
         "size": "180g",
-        "price": "26 200 Ft",
+        "price": 26200,
         "ingredients": [
             "alma",
             "füge",
@@ -46,7 +46,7 @@
         "name": "Summer Sunset",
         "description": "A warm embrace of summer evenings",
         "size": "220g",
-        "price": "34 900 Ft",
+        "price": 34900,
         "ingredients": [
             "orange peel",
             "coconut",
@@ -60,7 +60,7 @@
         "name": "Mystic Garden",
         "description": "Enchanting floral experience",
         "size": "200g",
-        "price": "30 500 Ft",
+        "price": 30500,
         "ingredients": [
             "rose petals",
             "lavender",
@@ -74,7 +74,7 @@
         "name": "Tropical Oasis",
         "description": "Escape to a tropical paradise",
         "size": "180g",
-        "price": "27 800 Ft",
+        "price": 27800,
         "ingredients": [
             "pineapple",
             "mango",
@@ -88,7 +88,7 @@
         "name": "Moonlit Serenity",
         "description": "Tranquil nights under the moonlight",
         "size": "210g",
-        "price": "50 200 Ft",
+        "price": 50200,
         "ingredients": [
             "lavender",
             "chamomile",
@@ -102,7 +102,7 @@
         "name": "Golden Elegance",
         "description": "Luxurious and opulent bath experience",
         "size": "240g",
-        "price": "38 500 Ft",
+        "price": 38500,
         "ingredients": [
             "gold leaf",
             "vanilla",
@@ -116,7 +116,7 @@
         "name": "Wildflower Bliss",
         "description": "Bask in the beauty of wildflowers",
         "size": "190g",
-        "price": "50 900 Ft",
+        "price": 50900,
         "ingredients": [
             "wild rose",
             "honeysuckle",
@@ -130,7 +130,7 @@
         "name": "Citrus Zing",
         "description": "Awaken your senses with citrus freshness",
         "size": "200g",
-        "price": "29 400 Ft",
+        "price": 29400,
         "ingredients": [
             "lemon",
             "lime",
@@ -144,7 +144,7 @@
         "name": "Exotic Spice",
         "description": "A blend of exotic spices for a warm bath",
         "size": "220g",
-        "price": "32 000 Ft",
+        "price": 32000,
         "ingredients": [
             "cinnamon",
             "cardamom",
@@ -158,7 +158,7 @@
         "name": "Cherry Dreams",
         "description": "Indulge in the beauty of cherry blossoms",
         "size": "210g",
-        "price": "31 900 Ft",
+        "price": 31900,
         "ingredients": [
             "cherry blossom",
             "rosewater",
@@ -172,7 +172,7 @@
         "name": "Lavender Tranquility",
         "description": "Relaxing lavender for a peaceful bath",
         "size": "180g",
-        "price": "26 300 Ft",
+        "price": 26300,
         "ingredients": [
             "lavender",
             "chamomile",
@@ -186,7 +186,7 @@
         "name": "Sparkling Citrus",
         "description": "Energize with the sparkle of citrus",
         "size": "190g",
-        "price": "28 500 Ft",
+        "price": 28500,
         "ingredients": [
             "orange",
             "grapefruit",
@@ -200,7 +200,7 @@
         "name": "Midnight Jasmine",
         "description": "Experience the allure of midnight jasmine",
         "size": "200g",
-        "price": "30 800 Ft",
+        "price": 30800,
         "ingredients": [
             "jasmine",
             "sandalwood",
@@ -214,7 +214,7 @@
         "name": "Soothing Chamomile",
         "description": "Gentle chamomile for a calming bath",
         "size": "180g",
-        "price": "27 200 Ft",
+        "price": 27200,
         "ingredients": [
             "chamomile",
             "calendula",
@@ -228,7 +228,7 @@
         "name": "Crisp Apple",
         "description": "A burst of freshness with crisp apples",
         "size": "210g",
-        "price": "29 700 Ft",
+        "price": 29700,
         "ingredients": [
             "apple",
             "mint",
@@ -242,7 +242,7 @@
         "name": "Last Tango",
         "description": "Dance with the tropical vibes of mango",
         "size": "220g",
-        "price": "31 600 Ft",
+        "price": 31600,
         "ingredients": [
             "mango",
             "coconut",

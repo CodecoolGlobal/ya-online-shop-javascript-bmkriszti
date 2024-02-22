@@ -19,11 +19,13 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    margin-top: 1.25rem;
 }
 
 
 header {
-    background-color: #3498db;
+    background-color: #007bff;
+    /* Primary blue */
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -40,14 +42,56 @@ main {
     padding: 20px;
 }
 
-.cart-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1.25rem;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto
+#cart-container {
+    position: fixed;
+    top: 1.25rem;
+    /* Adjust top position as needed */
+    right: 1.25rem;
+    /* Adjust right position as needed */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Set a background color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    /* Set a maximum width */
+    z-index: 999;
+    /* Ensures the cart is on top of other elements */
+}
+
+#cart-container h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    color: #000000;
+    text-align: center;
+}
+
+#cart-container p {
+    margin: 10px 0;
+    color: #000000;
+    padding: 2%;
+}
+
+#cart-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#cart-container button {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+    width: 100%;
+}
+
+#cart-container button:hover {
+    background-color: #4CAF50;
 }
 
 #p-container {
@@ -57,7 +101,7 @@ main {
     margin-top: 1.25rem;
     max-width: 75rem;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .cart {
@@ -87,8 +131,8 @@ main {
     margin: 10px 0;
     color: #000000;
     padding: 2%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+
 }
 
 .cart img {
@@ -97,7 +141,7 @@ main {
 }
 
 .cart {
-    position: relative; /* Make the cart a positioned container */
+    position: relative;
     background-color: rgb(117, 156, 163);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -105,6 +149,7 @@ main {
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
 .addToCart {
@@ -112,29 +157,21 @@ main {
     border: none;
     border-radius: 5px;
     color: #ffffff;
-    cursor: pointer; /* Set pointer cursor */
+    cursor: pointer;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Ensures the button spans the entire width of the cart */
-    border-radius: 0 0 10px 10px; /* Rounded corners only on the bottom-left and bottom-right */
+    width: 100%;
+    opacity: 0;
+}
+
+.cart:hover .addToCart {
+    visibility: visible;
+    opacity: 1;
 }
 
 .addToCart:hover {
-    background-color: #2980b9;
+    background-color: #4CAF50;
 }
-
-
-
-.footer {
-    background-color: #3498db;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
