@@ -13,7 +13,7 @@ async function fetchAndDisplayClientPage() {
             <h2>${product.name}</h2>
             <p>Description: ${product.description}</p>
             <p>Size: ${product.size}</p>
-            <p>Price: ${product.price}</p>
+            <p>Price: ${product.price} Ft</p>
             <p>Ingredients: ${product.ingredients}</p>
             <p>Quantity: ${product.quantity}</p>
             <img src="${product.picture}" alt="${product.name} Image">
@@ -35,7 +35,7 @@ async function fetchAndDisplayClientPage() {
                     document.getElementById('cart-container').insertAdjacentHTML('beforeend', nicerCart(product))
                     totalPrice += parseInt(product.price)
                 })
-                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice}</h3>
+                document.getElementById('cart-container').insertAdjacentHTML('beforeend', `<h3>Total Price: ${totalPrice} Ft</h3>
                                                                                             <button id="buy">Go to cart</button>`);
                 document.getElementById('buy').addEventListener('click', ()=>{
                     window.location.href = 'http://localhost:8080/cart'
@@ -61,7 +61,7 @@ function nicerCart(product) {
 
     productHTML += `
     <h2>${product.name}</h2>
-    <p>Price: ${product.price}</p>
+    <p>Price: ${product.price} Ft</p>
 `;
 
 return productHTML;

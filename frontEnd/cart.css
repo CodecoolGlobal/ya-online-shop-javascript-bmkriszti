@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1533228705496-072ca298b122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 1.25rem;
+}
+
+#cart-container {
+    background-color: rgb(117, 156, 163);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #232121;
+    margin: 0;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    #cart-container {
+        margin: 10px;
+    }
+}
