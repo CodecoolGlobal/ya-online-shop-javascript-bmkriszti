@@ -123,6 +123,9 @@ app.get("/editor", async (req, res) => {
     res.sendFile(path.join(__dirname, '../frontEnd', 'index.html'))
 })
 
+app.get("/cart", async (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontEnd', 'cart.html'))
+})
 app.listen(8080, () => {
     console.log("Server running on http://localhost:8080");
 });
