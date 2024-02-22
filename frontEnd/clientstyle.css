@@ -1,6 +1,11 @@
 /* Reset some default styles */
 body,
-h1,
+h1 {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+}
 h2,
 p,
 ul {
@@ -63,6 +68,7 @@ main {
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease-in-out;
+    
 }
 
 .cart:hover {
@@ -81,8 +87,8 @@ main {
     margin: 10px 0;
     color: #000000;
     padding: 2%;
-
-   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .cart img {
