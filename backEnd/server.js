@@ -12,6 +12,9 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../frontEnd")));
 
+app.get('/', (req, res) => {
+    res.redirect('/client'); // Redirects to client.html
+});
 
 app.get("/api/bath", async (req, res) => {
     try {
@@ -126,7 +129,7 @@ app.get("/editor", async (req, res) => {
 app.get("/cart", async (req, res) => {
     res.sendFile(path.join(__dirname, '../frontEnd', 'cart.html'))
 })
-app.listen(8080, () => {
+app.listen(8080,'0.0.0.0' () => {
     console.log("Server running on http://localhost:8080");
 });
 
