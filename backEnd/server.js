@@ -12,6 +12,9 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../frontEnd")));
 
+app.get('/', (req, res) => {
+    res.redirect('/client'); // Redirects to client.html
+});
 
 app.get("/api/bath", async (req, res) => {
     try {
